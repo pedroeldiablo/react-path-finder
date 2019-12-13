@@ -15,7 +15,7 @@
 }
 
 .node-visited {
-    animation-name: visitedAnimation;
+    animation-name: gradientAnimation;
     animation-duration: 1.5s;
     animation-timing-function: ease-out;
     animation-delay: 0;
@@ -23,6 +23,30 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-play-state: running;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-image: radial-gradient(transparent 100%);
+    }
+
+    10% {
+        background-image: radial-gradient(#27deaf 0%, transparent 10%, transparent 100%);
+
+    }
+
+    25% {
+        background-image: radial-gradient(#27deaf 0%, transparent 100%);
+
+    }
+
+    50% {
+        background-image: radial-gradient(#de27d2 0%, #27deaf 100%, transparent 100%);
+    }
+
+    100% {
+        background-image: radial-gradient(#de27d2 0%, #de27d2 100%);
+    }
 }
 
 @keyframes visitedAnimation {
