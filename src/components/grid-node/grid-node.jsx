@@ -4,7 +4,8 @@ import './grid-node.css';
 
 export default function GridNode(props) {
     const [isWall, updateIsWall] = useState(false)
-    const { isFinish, isStart, row , col} = props;
+    const [isWorking, willWork] = useState("worked")
+    const { isFinish, isStart, row , col, isVisited} = props;
     const extraClassName =  isFinish
     ? 'node-finish'
     : isStart
